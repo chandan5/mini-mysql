@@ -1,0 +1,8 @@
+Functionalities:
+
+Select, Delete with table.column or column option and where condition.
+Where with any number of conditions.
+Select with column projection and *.
+SUM, MAX, MIN, AVG, DISTINCT functions.
+Create, Truncate, Drop table
+Error Handling
