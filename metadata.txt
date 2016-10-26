@@ -1,6 +1,7 @@
 <begin_table>
 table2
 B
+C
 D
 <end_table>
 <begin_table>
