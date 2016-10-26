@@ -74,9 +74,7 @@ def parseQuery(queryString):
         dropStmt << ( dropToken + table.setResultsName("table"));
         parser = selectStmt | insertStmt | deleteStmt | createStmt | truncateStmt | dropStmt | exitToken;
         tokens = parser.parseString(queryString);
-        # print tokens
         # import pdb; pdb.set_trace()
-
         return tokens
     except Exception as e:
         # print e;
