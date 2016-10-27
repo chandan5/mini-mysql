@@ -1,0 +1,91 @@
+\hypertarget{parse__query_8py}{}\section{/home/user/mini-\/mysql/parse\+\_\+query.py File Reference}
+\label{parse__query_8py}\index{/home/user/mini-\/mysql/parse\+\_\+query.\+py@{/home/user/mini-\/mysql/parse\+\_\+query.\+py}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceparse__query}{parse\+\_\+query}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceparse__query_a0771a3827bbf0ed432115ce95bcfc828}{parse\+\_\+query.\+parse\+Query} (query\+String)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceparse__query_ab1003cd5e59f126e1e81f9b296c3e0ca}{parse\+\_\+query.\+binop} = one\+Of(\char`\"{}= != $<$ $>$ $>$= $<$= eq ne lt le gt ge\char`\"{}, caseless=True)
+\item 
+\hyperlink{namespaceparse__query_aa9979d0331f3924dcf931d9d1f1aebea}{parse\+\_\+query.\+select\+Token} = Keyword(\char`\"{}select\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a05b504fbc190ae99066e3bbea8d3cb06}{parse\+\_\+query.\+select\+Max\+Token} = Keyword(\char`\"{}select max\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a441827d35b414007260820129ba7a0cb}{parse\+\_\+query.\+select\+Min\+Token} = Keyword(\char`\"{}select min\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a584d3222777d316fea832ec01d0b3c5f}{parse\+\_\+query.\+select\+Avg\+Token} = Keyword(\char`\"{}select avg\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_aa03154051f4fe9a18a73ebcd36624d11}{parse\+\_\+query.\+select\+Special\+Token} = select\+Max\+Token$\vert$select\+Min\+Token$\vert$select\+Avg\+Token
+\item 
+\hyperlink{namespaceparse__query_ae9bf3d0493a1acaac4f260dbdaf13fbd}{parse\+\_\+query.\+from\+Token} = Keyword(\char`\"{}from\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a4b0f83d40d9f19424aab72cfca82eeba}{parse\+\_\+query.\+where\+Token} = Keyword(\char`\"{}where\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a9e4017fe334976aee7c5d652e10def8f}{parse\+\_\+query.\+insert\+Token} = Keyword(\char`\"{}insert into\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a2e9d87bd383bef60ce74b0badf23cd4a}{parse\+\_\+query.\+delete\+Token} = Keyword(\char`\"{}delete from\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a23075b5f9c87912458ebe512e6c84d64}{parse\+\_\+query.\+values\+Token} = Keyword(\char`\"{}values\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a5cd001d7c494bf0c5c026c9b14eacfca}{parse\+\_\+query.\+create\+Token} = Keyword(\char`\"{}create table\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_ae8bbedcc418797a022f1729c3ab06d8f}{parse\+\_\+query.\+truncate\+Token} = Keyword(\char`\"{}truncate table\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a5b967e0942a66c2cd672cffd95199882}{parse\+\_\+query.\+drop\+Token} = Keyword(\char`\"{}drop table\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a5f6923b6db3ab18f01b7c58ba767cd0d}{parse\+\_\+query.\+exit\+Token} = Keyword(\char`\"{}exit\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_ad3fcd102f8a00826a83a1e8a921760d0}{parse\+\_\+query.\+int\+Token} = Keyword(\char`\"{}int\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_aeeaf26f2706237e92e28ef37167e0d24}{parse\+\_\+query.\+and\+\_\+} = Keyword(\char`\"{}and\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a8d9f764c774421bbc4bc8b8e40f32668}{parse\+\_\+query.\+or\+\_\+} = Keyword(\char`\"{}or\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{parse\+\_\+query.\+table} = Word(alphanums);
+\item 
+\hyperlink{namespaceparse__query_aba0ec1a15dd6eeaf692596690d6256ed}{parse\+\_\+query.\+columns} = Group(delimited\+List(column));
+\item 
+\hyperlink{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}{parse\+\_\+query.\+table\+\_\+column} = Combine(Optional(table + \char`\"{}.\char`\"{}) + column);
+\item 
+\hyperlink{namespaceparse__query_a8d38f4998f3935568112fcd8e31e06a3}{parse\+\_\+query.\+sum\+Token} = Keyword(\char`\"{}sum\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a1189a8897d300e08d3d4b00224482d79}{parse\+\_\+query.\+max\+Token} = Keyword(\char`\"{}max\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a70846ee64743086995f9e5a5cf892eca}{parse\+\_\+query.\+min\+Token} = Keyword(\char`\"{}min\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_ac13d5a3fbab8872f67fb655514b59e1b}{parse\+\_\+query.\+avg\+Token} = Keyword(\char`\"{}avg\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a12a40f814458cd318eb56742bc0a84ab}{parse\+\_\+query.\+distinct\+Token} = Keyword(\char`\"{}distinct\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a3e5401120fbf16c839c80e55e67e215e}{parse\+\_\+query.\+table\+\_\+columns} = Group(delimited\+List(table\+\_\+column));
+\item 
+list \hyperlink{namespaceparse__query_aa9f089f21476dbb671d1fde5cbe7a7bc}{parse\+\_\+query.\+func\+\_\+names} = \mbox{[}sum\+Token, max\+Token, min\+Token, avg\+Token, distinct\+Token\mbox{]};
+\item 
+\hyperlink{namespaceparse__query_aee714d7bc945420e350fd4037ac31476}{parse\+\_\+query.\+special\+Token} = sum\+Token$\vert$max\+Token$\vert$min\+Token$\vert$avg\+Token$\vert$distinct\+Token
+\item 
+\hyperlink{namespaceparse__query_a0dcad7340b58d9bb7af20ce8536ee213}{parse\+\_\+query.\+func\+\_\+table\+\_\+column} = Group(special\+Token + \textquotesingle{}(\textquotesingle{} + table\+\_\+column + \textquotesingle{})\textquotesingle{});
+\item 
+\hyperlink{namespaceparse__query_a770ec85d393de65ed54d45cf34c43f28}{parse\+\_\+query.\+tables} = Group(delimited\+List(table));
+\item 
+\hyperlink{namespaceparse__query_a709ffd51e32f7b162656bb861d5d374d}{parse\+\_\+query.\+number} = Word(nums)
+\item 
+\hyperlink{namespaceparse__query_ac5dcea7577abdac23037689af0a2dc7d}{parse\+\_\+query.\+plusorminus} = Literal(\textquotesingle{}+\textquotesingle{})$\vert$Literal(\textquotesingle{}-\/\textquotesingle{})
+\item 
+\hyperlink{namespaceparse__query_abe733870f0060062cc27e12df022f113}{parse\+\_\+query.\+int\+Num} = Combine( Optional(plusorminus) + number )
+\item 
+\hyperlink{namespaceparse__query_ac182cdcf0ecfe237fbb9d43ec2950f2d}{parse\+\_\+query.\+int\+Nums} = Group(delimited\+List(int\+Num));
+\item 
+\hyperlink{namespaceparse__query_a654eaf38e9ab6f5f0e89bb4f2a4a9107}{parse\+\_\+query.\+columnL} = table\+\_\+column$\vert$int\+Num
+\item 
+\hyperlink{namespaceparse__query_aa5e265b3dd4230a09df4977a3e3db604}{parse\+\_\+query.\+where\+Condition} = Group(columnL + binop + columnR).set\+Results\+Name(\char`\"{}cond\char`\"{});
+\item 
+\hyperlink{namespaceparse__query_af769fe5bdda44bd71ae1e252d7b7bba5}{parse\+\_\+query.\+where\+Expression} = Forward()
+\end{DoxyCompactItemize}
