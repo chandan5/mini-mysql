@@ -5,7 +5,7 @@ The project implements a subset of SQL functionalities according to the followin
 
 - Select, Delete with table.column or column option and where condition
 - Where with any number of conditions
-- Select with column projection and *
+- Select with column projection and *(wildcard)
 - SUM, MAX, MIN, AVG, DISTINCT functions
 - Create, Truncate, Drop table
 
