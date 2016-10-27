@@ -1,0 +1,147 @@
+\hypertarget{namespacecsv__metadata}{}\section{csv\+\_\+metadata Namespace Reference}
+\label{namespacecsv__metadata}\index{csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecsv__metadata_ac1ac1f24352a53dae0ae96ad9872985f}{read\+Table} (tablename, table)
+\item 
+def \hyperlink{namespacecsv__metadata_a06957542212e3a336b9361143daf14a1}{truncate\+Table} (table, \hyperlink{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{db})
+\item 
+def \hyperlink{namespacecsv__metadata_ab69f9a99263ae7a98c70f260c7070a1e}{print\+Rows} (header, rows)
+\item 
+def \hyperlink{namespacecsv__metadata_a8cbfbdd517a676ba5fe17575e341226f}{col\+No\+From\+Col\+Name} (table\+\_\+column, tables, \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata})
+\item 
+def \hyperlink{namespacecsv__metadata_a070fb77f6306fe96fd6e0b480c261588}{execute\+Insert} (table, values, \hyperlink{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{db}, \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata})
+\item 
+def \hyperlink{namespacecsv__metadata_addd1fcf6b5c68e32a7383da138984b6b}{where\+Clause} (row, conds, tables, \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata})
+\item 
+def \hyperlink{namespacecsv__metadata_acf210ad5cfd8151711d4b50dbf0fd248}{execute\+Delete} (tables, where, conds, \hyperlink{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{db}, \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata})
+\item 
+def \hyperlink{namespacecsv__metadata_a9d699f6d8e090d60632fb855549bb323}{execute\+Select} (all\+Columns, columns, tables, where, conds, \hyperlink{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{db}, \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata})
+\item 
+def \hyperlink{namespacecsv__metadata_aac9c3c471792496f745fad65e66edbb4}{execute} (tokens, \hyperlink{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{db}, \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata})
+\item 
+def \hyperlink{namespacecsv__metadata_a5617bb133a371783a096269046010cc5}{read\+Metadata\+And\+Construct\+Db} ()
+\item 
+def \hyperlink{namespacecsv__metadata_a2971e98c22418db43c41bb68c995bd6d}{add\+Table} (tablename, fields)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \hyperlink{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{metadata} = \{\};
+\item 
+dictionary \hyperlink{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{db} = \{\};
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!add\+Table@{add\+Table}}
+\index{add\+Table@{add\+Table}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{add\+Table(tablename, fields)}{addTable(tablename, fields)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+add\+Table (
+\begin{DoxyParamCaption}
+\item[{}]{tablename, }
+\item[{}]{fields}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_a2971e98c22418db43c41bb68c995bd6d}{}\label{namespacecsv__metadata_a2971e98c22418db43c41bb68c995bd6d}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!col\+No\+From\+Col\+Name@{col\+No\+From\+Col\+Name}}
+\index{col\+No\+From\+Col\+Name@{col\+No\+From\+Col\+Name}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{col\+No\+From\+Col\+Name(table\+\_\+column, tables, metadata)}{colNoFromColName(table_column, tables, metadata)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+col\+No\+From\+Col\+Name (
+\begin{DoxyParamCaption}
+\item[{}]{table\+\_\+column, }
+\item[{}]{tables, }
+\item[{}]{metadata}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_a8cbfbdd517a676ba5fe17575e341226f}{}\label{namespacecsv__metadata_a8cbfbdd517a676ba5fe17575e341226f}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!execute@{execute}}
+\index{execute@{execute}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{execute(tokens, db, metadata)}{execute(tokens, db, metadata)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+execute (
+\begin{DoxyParamCaption}
+\item[{}]{tokens, }
+\item[{}]{db, }
+\item[{}]{metadata}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_aac9c3c471792496f745fad65e66edbb4}{}\label{namespacecsv__metadata_aac9c3c471792496f745fad65e66edbb4}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!execute\+Delete@{execute\+Delete}}
+\index{execute\+Delete@{execute\+Delete}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{execute\+Delete(tables, where, conds, db, metadata)}{executeDelete(tables, where, conds, db, metadata)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+execute\+Delete (
+\begin{DoxyParamCaption}
+\item[{}]{tables, }
+\item[{}]{where, }
+\item[{}]{conds, }
+\item[{}]{db, }
+\item[{}]{metadata}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_acf210ad5cfd8151711d4b50dbf0fd248}{}\label{namespacecsv__metadata_acf210ad5cfd8151711d4b50dbf0fd248}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!execute\+Insert@{execute\+Insert}}
+\index{execute\+Insert@{execute\+Insert}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{execute\+Insert(table, values, db, metadata)}{executeInsert(table, values, db, metadata)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+execute\+Insert (
+\begin{DoxyParamCaption}
+\item[{}]{table, }
+\item[{}]{values, }
+\item[{}]{db, }
+\item[{}]{metadata}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_a070fb77f6306fe96fd6e0b480c261588}{}\label{namespacecsv__metadata_a070fb77f6306fe96fd6e0b480c261588}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!execute\+Select@{execute\+Select}}
+\index{execute\+Select@{execute\+Select}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{execute\+Select(all\+Columns, columns, tables, where, conds, db, metadata)}{executeSelect(allColumns, columns, tables, where, conds, db, metadata)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+execute\+Select (
+\begin{DoxyParamCaption}
+\item[{}]{all\+Columns, }
+\item[{}]{columns, }
+\item[{}]{tables, }
+\item[{}]{where, }
+\item[{}]{conds, }
+\item[{}]{db, }
+\item[{}]{metadata}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_a9d699f6d8e090d60632fb855549bb323}{}\label{namespacecsv__metadata_a9d699f6d8e090d60632fb855549bb323}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!print\+Rows@{print\+Rows}}
+\index{print\+Rows@{print\+Rows}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{print\+Rows(header, rows)}{printRows(header, rows)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+print\+Rows (
+\begin{DoxyParamCaption}
+\item[{}]{header, }
+\item[{}]{rows}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_ab69f9a99263ae7a98c70f260c7070a1e}{}\label{namespacecsv__metadata_ab69f9a99263ae7a98c70f260c7070a1e}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!read\+Metadata\+And\+Construct\+Db@{read\+Metadata\+And\+Construct\+Db}}
+\index{read\+Metadata\+And\+Construct\+Db@{read\+Metadata\+And\+Construct\+Db}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{read\+Metadata\+And\+Construct\+Db()}{readMetadataAndConstructDb()}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+read\+Metadata\+And\+Construct\+Db (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_a5617bb133a371783a096269046010cc5}{}\label{namespacecsv__metadata_a5617bb133a371783a096269046010cc5}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!read\+Table@{read\+Table}}
+\index{read\+Table@{read\+Table}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{read\+Table(tablename, table)}{readTable(tablename, table)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+read\+Table (
+\begin{DoxyParamCaption}
+\item[{}]{tablename, }
+\item[{}]{table}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_ac1ac1f24352a53dae0ae96ad9872985f}{}\label{namespacecsv__metadata_ac1ac1f24352a53dae0ae96ad9872985f}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!truncate\+Table@{truncate\+Table}}
+\index{truncate\+Table@{truncate\+Table}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{truncate\+Table(table, db)}{truncateTable(table, db)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+truncate\+Table (
+\begin{DoxyParamCaption}
+\item[{}]{table, }
+\item[{}]{db}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_a06957542212e3a336b9361143daf14a1}{}\label{namespacecsv__metadata_a06957542212e3a336b9361143daf14a1}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!where\+Clause@{where\+Clause}}
+\index{where\+Clause@{where\+Clause}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{where\+Clause(row, conds, tables, metadata)}{whereClause(row, conds, tables, metadata)}}]{\setlength{\rightskip}{0pt plus 5cm}def csv\+\_\+metadata.\+where\+Clause (
+\begin{DoxyParamCaption}
+\item[{}]{row, }
+\item[{}]{conds, }
+\item[{}]{tables, }
+\item[{}]{metadata}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecsv__metadata_addd1fcf6b5c68e32a7383da138984b6b}{}\label{namespacecsv__metadata_addd1fcf6b5c68e32a7383da138984b6b}
+
+
+\subsection{Variable Documentation}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!db@{db}}
+\index{db@{db}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{db}{db}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary csv\+\_\+metadata.\+db = \{\};}\hypertarget{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}{}\label{namespacecsv__metadata_a420b92194841cb3f4c75f0a5e3d9b11a}
+\index{csv\+\_\+metadata@{csv\+\_\+metadata}!metadata@{metadata}}
+\index{metadata@{metadata}!csv\+\_\+metadata@{csv\+\_\+metadata}}
+\subsubsection[{\texorpdfstring{metadata}{metadata}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary csv\+\_\+metadata.\+metadata = \{\};}\hypertarget{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}{}\label{namespacecsv__metadata_aaa78faa581bc02a7969a61a25e9fe02d}

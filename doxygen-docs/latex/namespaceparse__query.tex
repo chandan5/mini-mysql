@@ -1,0 +1,213 @@
+\hypertarget{namespaceparse__query}{}\section{parse\+\_\+query Namespace Reference}
+\label{namespaceparse__query}\index{parse\+\_\+query@{parse\+\_\+query}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceparse__query_a0771a3827bbf0ed432115ce95bcfc828}{parse\+Query} (query\+String)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceparse__query_ab1003cd5e59f126e1e81f9b296c3e0ca}{binop} = one\+Of(\char`\"{}= != $<$ $>$ $>$= $<$= eq ne lt le gt ge\char`\"{}, caseless=True)
+\item 
+\hyperlink{namespaceparse__query_aa9979d0331f3924dcf931d9d1f1aebea}{select\+Token} = Keyword(\char`\"{}select\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a05b504fbc190ae99066e3bbea8d3cb06}{select\+Max\+Token} = Keyword(\char`\"{}select max\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a441827d35b414007260820129ba7a0cb}{select\+Min\+Token} = Keyword(\char`\"{}select min\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a584d3222777d316fea832ec01d0b3c5f}{select\+Avg\+Token} = Keyword(\char`\"{}select avg\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_aa03154051f4fe9a18a73ebcd36624d11}{select\+Special\+Token} = \hyperlink{namespaceparse__query_a05b504fbc190ae99066e3bbea8d3cb06}{select\+Max\+Token}$\vert$\hyperlink{namespaceparse__query_a441827d35b414007260820129ba7a0cb}{select\+Min\+Token}$\vert$\hyperlink{namespaceparse__query_a584d3222777d316fea832ec01d0b3c5f}{select\+Avg\+Token}
+\item 
+\hyperlink{namespaceparse__query_ae9bf3d0493a1acaac4f260dbdaf13fbd}{from\+Token} = Keyword(\char`\"{}from\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a4b0f83d40d9f19424aab72cfca82eeba}{where\+Token} = Keyword(\char`\"{}where\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a9e4017fe334976aee7c5d652e10def8f}{insert\+Token} = Keyword(\char`\"{}insert into\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a2e9d87bd383bef60ce74b0badf23cd4a}{delete\+Token} = Keyword(\char`\"{}delete from\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a23075b5f9c87912458ebe512e6c84d64}{values\+Token} = Keyword(\char`\"{}values\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a5cd001d7c494bf0c5c026c9b14eacfca}{create\+Token} = Keyword(\char`\"{}create \hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{table}\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_ae8bbedcc418797a022f1729c3ab06d8f}{truncate\+Token} = Keyword(\char`\"{}truncate \hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{table}\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a5b967e0942a66c2cd672cffd95199882}{drop\+Token} = Keyword(\char`\"{}drop \hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{table}\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a5f6923b6db3ab18f01b7c58ba767cd0d}{exit\+Token} = Keyword(\char`\"{}exit\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_ad3fcd102f8a00826a83a1e8a921760d0}{int\+Token} = Keyword(\char`\"{}int\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_aeeaf26f2706237e92e28ef37167e0d24}{and\+\_\+} = Keyword(\char`\"{}and\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a8d9f764c774421bbc4bc8b8e40f32668}{or\+\_\+} = Keyword(\char`\"{}or\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{table} = Word(alphanums);
+\item 
+\hyperlink{namespaceparse__query_aba0ec1a15dd6eeaf692596690d6256ed}{columns} = Group(delimited\+List(column));
+\item 
+\hyperlink{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}{table\+\_\+column} = Combine(Optional(\hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{table} + \char`\"{}.\char`\"{}) + column);
+\item 
+\hyperlink{namespaceparse__query_a8d38f4998f3935568112fcd8e31e06a3}{sum\+Token} = Keyword(\char`\"{}sum\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a1189a8897d300e08d3d4b00224482d79}{max\+Token} = Keyword(\char`\"{}max\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a70846ee64743086995f9e5a5cf892eca}{min\+Token} = Keyword(\char`\"{}min\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_ac13d5a3fbab8872f67fb655514b59e1b}{avg\+Token} = Keyword(\char`\"{}avg\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a12a40f814458cd318eb56742bc0a84ab}{distinct\+Token} = Keyword(\char`\"{}distinct\char`\"{}, caseless=True);
+\item 
+\hyperlink{namespaceparse__query_a3e5401120fbf16c839c80e55e67e215e}{table\+\_\+columns} = Group(delimited\+List(\hyperlink{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}{table\+\_\+column}));
+\item 
+list \hyperlink{namespaceparse__query_aa9f089f21476dbb671d1fde5cbe7a7bc}{func\+\_\+names} = \mbox{[}\hyperlink{namespaceparse__query_a8d38f4998f3935568112fcd8e31e06a3}{sum\+Token}, \hyperlink{namespaceparse__query_a1189a8897d300e08d3d4b00224482d79}{max\+Token}, \hyperlink{namespaceparse__query_a70846ee64743086995f9e5a5cf892eca}{min\+Token}, \hyperlink{namespaceparse__query_ac13d5a3fbab8872f67fb655514b59e1b}{avg\+Token}, \hyperlink{namespaceparse__query_a12a40f814458cd318eb56742bc0a84ab}{distinct\+Token}\mbox{]};
+\item 
+\hyperlink{namespaceparse__query_aee714d7bc945420e350fd4037ac31476}{special\+Token} = \hyperlink{namespaceparse__query_a8d38f4998f3935568112fcd8e31e06a3}{sum\+Token}$\vert$\hyperlink{namespaceparse__query_a1189a8897d300e08d3d4b00224482d79}{max\+Token}$\vert$\hyperlink{namespaceparse__query_a70846ee64743086995f9e5a5cf892eca}{min\+Token}$\vert$\hyperlink{namespaceparse__query_ac13d5a3fbab8872f67fb655514b59e1b}{avg\+Token}$\vert$\hyperlink{namespaceparse__query_a12a40f814458cd318eb56742bc0a84ab}{distinct\+Token}
+\item 
+\hyperlink{namespaceparse__query_a0dcad7340b58d9bb7af20ce8536ee213}{func\+\_\+table\+\_\+column} = Group(\hyperlink{namespaceparse__query_aee714d7bc945420e350fd4037ac31476}{special\+Token} + \textquotesingle{}(\textquotesingle{} + \hyperlink{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}{table\+\_\+column} + \textquotesingle{})\textquotesingle{});
+\item 
+\hyperlink{namespaceparse__query_a770ec85d393de65ed54d45cf34c43f28}{tables} = Group(delimited\+List(\hyperlink{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{table}));
+\item 
+\hyperlink{namespaceparse__query_a709ffd51e32f7b162656bb861d5d374d}{number} = Word(nums)
+\item 
+\hyperlink{namespaceparse__query_ac5dcea7577abdac23037689af0a2dc7d}{plusorminus} = Literal(\textquotesingle{}+\textquotesingle{})$\vert$Literal(\textquotesingle{}-\/\textquotesingle{})
+\item 
+\hyperlink{namespaceparse__query_abe733870f0060062cc27e12df022f113}{int\+Num} = Combine( Optional(\hyperlink{namespaceparse__query_ac5dcea7577abdac23037689af0a2dc7d}{plusorminus}) + \hyperlink{namespaceparse__query_a709ffd51e32f7b162656bb861d5d374d}{number} )
+\item 
+\hyperlink{namespaceparse__query_ac182cdcf0ecfe237fbb9d43ec2950f2d}{int\+Nums} = Group(delimited\+List(\hyperlink{namespaceparse__query_abe733870f0060062cc27e12df022f113}{int\+Num}));
+\item 
+\hyperlink{namespaceparse__query_a654eaf38e9ab6f5f0e89bb4f2a4a9107}{columnL} = \hyperlink{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}{table\+\_\+column}$\vert$\hyperlink{namespaceparse__query_abe733870f0060062cc27e12df022f113}{int\+Num}
+\item 
+\hyperlink{namespaceparse__query_aa5e265b3dd4230a09df4977a3e3db604}{where\+Condition} = Group(\hyperlink{namespaceparse__query_a654eaf38e9ab6f5f0e89bb4f2a4a9107}{columnL} + \hyperlink{namespaceparse__query_ab1003cd5e59f126e1e81f9b296c3e0ca}{binop} + columnR).set\+Results\+Name(\char`\"{}cond\char`\"{});
+\item 
+\hyperlink{namespaceparse__query_af769fe5bdda44bd71ae1e252d7b7bba5}{where\+Expression} = Forward()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{parse\+\_\+query@{parse\+\_\+query}!parse\+Query@{parse\+Query}}
+\index{parse\+Query@{parse\+Query}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{parse\+Query(query\+String)}{parseQuery(queryString)}}]{\setlength{\rightskip}{0pt plus 5cm}def parse\+\_\+query.\+parse\+Query (
+\begin{DoxyParamCaption}
+\item[{}]{query\+String}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceparse__query_a0771a3827bbf0ed432115ce95bcfc828}{}\label{namespaceparse__query_a0771a3827bbf0ed432115ce95bcfc828}
+
+
+\subsection{Variable Documentation}
+\index{parse\+\_\+query@{parse\+\_\+query}!and\+\_\+@{and\+\_\+}}
+\index{and\+\_\+@{and\+\_\+}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{and\+\_\+}{and_}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+and\+\_\+ = Keyword(\char`\"{}and\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_aeeaf26f2706237e92e28ef37167e0d24}{}\label{namespaceparse__query_aeeaf26f2706237e92e28ef37167e0d24}
+\index{parse\+\_\+query@{parse\+\_\+query}!avg\+Token@{avg\+Token}}
+\index{avg\+Token@{avg\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{avg\+Token}{avgToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+avg\+Token = Keyword(\char`\"{}avg\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_ac13d5a3fbab8872f67fb655514b59e1b}{}\label{namespaceparse__query_ac13d5a3fbab8872f67fb655514b59e1b}
+\index{parse\+\_\+query@{parse\+\_\+query}!binop@{binop}}
+\index{binop@{binop}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{binop}{binop}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+binop = one\+Of(\char`\"{}= != $<$ $>$ $>$= $<$= eq ne lt le gt ge\char`\"{}, caseless=True)}\hypertarget{namespaceparse__query_ab1003cd5e59f126e1e81f9b296c3e0ca}{}\label{namespaceparse__query_ab1003cd5e59f126e1e81f9b296c3e0ca}
+\index{parse\+\_\+query@{parse\+\_\+query}!columnL@{columnL}}
+\index{columnL@{columnL}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{columnL}{columnL}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+columnL = {\bf table\+\_\+column}$\vert${\bf int\+Num}}\hypertarget{namespaceparse__query_a654eaf38e9ab6f5f0e89bb4f2a4a9107}{}\label{namespaceparse__query_a654eaf38e9ab6f5f0e89bb4f2a4a9107}
+\index{parse\+\_\+query@{parse\+\_\+query}!columns@{columns}}
+\index{columns@{columns}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{columns}{columns}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+columns = Group(delimited\+List(column));}\hypertarget{namespaceparse__query_aba0ec1a15dd6eeaf692596690d6256ed}{}\label{namespaceparse__query_aba0ec1a15dd6eeaf692596690d6256ed}
+\index{parse\+\_\+query@{parse\+\_\+query}!create\+Token@{create\+Token}}
+\index{create\+Token@{create\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{create\+Token}{createToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+create\+Token = Keyword(\char`\"{}create {\bf table}\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a5cd001d7c494bf0c5c026c9b14eacfca}{}\label{namespaceparse__query_a5cd001d7c494bf0c5c026c9b14eacfca}
+\index{parse\+\_\+query@{parse\+\_\+query}!delete\+Token@{delete\+Token}}
+\index{delete\+Token@{delete\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{delete\+Token}{deleteToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+delete\+Token = Keyword(\char`\"{}delete from\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a2e9d87bd383bef60ce74b0badf23cd4a}{}\label{namespaceparse__query_a2e9d87bd383bef60ce74b0badf23cd4a}
+\index{parse\+\_\+query@{parse\+\_\+query}!distinct\+Token@{distinct\+Token}}
+\index{distinct\+Token@{distinct\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{distinct\+Token}{distinctToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+distinct\+Token = Keyword(\char`\"{}distinct\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a12a40f814458cd318eb56742bc0a84ab}{}\label{namespaceparse__query_a12a40f814458cd318eb56742bc0a84ab}
+\index{parse\+\_\+query@{parse\+\_\+query}!drop\+Token@{drop\+Token}}
+\index{drop\+Token@{drop\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{drop\+Token}{dropToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+drop\+Token = Keyword(\char`\"{}drop {\bf table}\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a5b967e0942a66c2cd672cffd95199882}{}\label{namespaceparse__query_a5b967e0942a66c2cd672cffd95199882}
+\index{parse\+\_\+query@{parse\+\_\+query}!exit\+Token@{exit\+Token}}
+\index{exit\+Token@{exit\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{exit\+Token}{exitToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+exit\+Token = Keyword(\char`\"{}exit\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a5f6923b6db3ab18f01b7c58ba767cd0d}{}\label{namespaceparse__query_a5f6923b6db3ab18f01b7c58ba767cd0d}
+\index{parse\+\_\+query@{parse\+\_\+query}!from\+Token@{from\+Token}}
+\index{from\+Token@{from\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{from\+Token}{fromToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+from\+Token = Keyword(\char`\"{}from\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_ae9bf3d0493a1acaac4f260dbdaf13fbd}{}\label{namespaceparse__query_ae9bf3d0493a1acaac4f260dbdaf13fbd}
+\index{parse\+\_\+query@{parse\+\_\+query}!func\+\_\+names@{func\+\_\+names}}
+\index{func\+\_\+names@{func\+\_\+names}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{func\+\_\+names}{func_names}}]{\setlength{\rightskip}{0pt plus 5cm}list parse\+\_\+query.\+func\+\_\+names = \mbox{[}{\bf sum\+Token}, {\bf max\+Token}, {\bf min\+Token}, {\bf avg\+Token}, {\bf distinct\+Token}\mbox{]};}\hypertarget{namespaceparse__query_aa9f089f21476dbb671d1fde5cbe7a7bc}{}\label{namespaceparse__query_aa9f089f21476dbb671d1fde5cbe7a7bc}
+\index{parse\+\_\+query@{parse\+\_\+query}!func\+\_\+table\+\_\+column@{func\+\_\+table\+\_\+column}}
+\index{func\+\_\+table\+\_\+column@{func\+\_\+table\+\_\+column}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{func\+\_\+table\+\_\+column}{func_table_column}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+func\+\_\+table\+\_\+column = Group({\bf special\+Token} + \textquotesingle{}(\textquotesingle{} + {\bf table\+\_\+column} + \textquotesingle{})\textquotesingle{});}\hypertarget{namespaceparse__query_a0dcad7340b58d9bb7af20ce8536ee213}{}\label{namespaceparse__query_a0dcad7340b58d9bb7af20ce8536ee213}
+\index{parse\+\_\+query@{parse\+\_\+query}!insert\+Token@{insert\+Token}}
+\index{insert\+Token@{insert\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{insert\+Token}{insertToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+insert\+Token = Keyword(\char`\"{}insert into\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a9e4017fe334976aee7c5d652e10def8f}{}\label{namespaceparse__query_a9e4017fe334976aee7c5d652e10def8f}
+\index{parse\+\_\+query@{parse\+\_\+query}!int\+Num@{int\+Num}}
+\index{int\+Num@{int\+Num}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{int\+Num}{intNum}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+int\+Num = Combine( Optional({\bf plusorminus}) + {\bf number} )}\hypertarget{namespaceparse__query_abe733870f0060062cc27e12df022f113}{}\label{namespaceparse__query_abe733870f0060062cc27e12df022f113}
+\index{parse\+\_\+query@{parse\+\_\+query}!int\+Nums@{int\+Nums}}
+\index{int\+Nums@{int\+Nums}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{int\+Nums}{intNums}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+int\+Nums = Group(delimited\+List({\bf int\+Num}));}\hypertarget{namespaceparse__query_ac182cdcf0ecfe237fbb9d43ec2950f2d}{}\label{namespaceparse__query_ac182cdcf0ecfe237fbb9d43ec2950f2d}
+\index{parse\+\_\+query@{parse\+\_\+query}!int\+Token@{int\+Token}}
+\index{int\+Token@{int\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{int\+Token}{intToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+int\+Token = Keyword(\char`\"{}int\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_ad3fcd102f8a00826a83a1e8a921760d0}{}\label{namespaceparse__query_ad3fcd102f8a00826a83a1e8a921760d0}
+\index{parse\+\_\+query@{parse\+\_\+query}!max\+Token@{max\+Token}}
+\index{max\+Token@{max\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{max\+Token}{maxToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+max\+Token = Keyword(\char`\"{}max\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a1189a8897d300e08d3d4b00224482d79}{}\label{namespaceparse__query_a1189a8897d300e08d3d4b00224482d79}
+\index{parse\+\_\+query@{parse\+\_\+query}!min\+Token@{min\+Token}}
+\index{min\+Token@{min\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{min\+Token}{minToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+min\+Token = Keyword(\char`\"{}min\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a70846ee64743086995f9e5a5cf892eca}{}\label{namespaceparse__query_a70846ee64743086995f9e5a5cf892eca}
+\index{parse\+\_\+query@{parse\+\_\+query}!number@{number}}
+\index{number@{number}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{number}{number}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+number = Word(nums)}\hypertarget{namespaceparse__query_a709ffd51e32f7b162656bb861d5d374d}{}\label{namespaceparse__query_a709ffd51e32f7b162656bb861d5d374d}
+\index{parse\+\_\+query@{parse\+\_\+query}!or\+\_\+@{or\+\_\+}}
+\index{or\+\_\+@{or\+\_\+}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{or\+\_\+}{or_}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+or\+\_\+ = Keyword(\char`\"{}or\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a8d9f764c774421bbc4bc8b8e40f32668}{}\label{namespaceparse__query_a8d9f764c774421bbc4bc8b8e40f32668}
+\index{parse\+\_\+query@{parse\+\_\+query}!plusorminus@{plusorminus}}
+\index{plusorminus@{plusorminus}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{plusorminus}{plusorminus}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+plusorminus = Literal(\textquotesingle{}+\textquotesingle{})$\vert$Literal(\textquotesingle{}-\/\textquotesingle{})}\hypertarget{namespaceparse__query_ac5dcea7577abdac23037689af0a2dc7d}{}\label{namespaceparse__query_ac5dcea7577abdac23037689af0a2dc7d}
+\index{parse\+\_\+query@{parse\+\_\+query}!select\+Avg\+Token@{select\+Avg\+Token}}
+\index{select\+Avg\+Token@{select\+Avg\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{select\+Avg\+Token}{selectAvgToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+select\+Avg\+Token = Keyword(\char`\"{}select avg\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a584d3222777d316fea832ec01d0b3c5f}{}\label{namespaceparse__query_a584d3222777d316fea832ec01d0b3c5f}
+\index{parse\+\_\+query@{parse\+\_\+query}!select\+Max\+Token@{select\+Max\+Token}}
+\index{select\+Max\+Token@{select\+Max\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{select\+Max\+Token}{selectMaxToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+select\+Max\+Token = Keyword(\char`\"{}select max\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a05b504fbc190ae99066e3bbea8d3cb06}{}\label{namespaceparse__query_a05b504fbc190ae99066e3bbea8d3cb06}
+\index{parse\+\_\+query@{parse\+\_\+query}!select\+Min\+Token@{select\+Min\+Token}}
+\index{select\+Min\+Token@{select\+Min\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{select\+Min\+Token}{selectMinToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+select\+Min\+Token = Keyword(\char`\"{}select min\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a441827d35b414007260820129ba7a0cb}{}\label{namespaceparse__query_a441827d35b414007260820129ba7a0cb}
+\index{parse\+\_\+query@{parse\+\_\+query}!select\+Special\+Token@{select\+Special\+Token}}
+\index{select\+Special\+Token@{select\+Special\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{select\+Special\+Token}{selectSpecialToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+select\+Special\+Token = {\bf select\+Max\+Token}$\vert${\bf select\+Min\+Token}$\vert${\bf select\+Avg\+Token}}\hypertarget{namespaceparse__query_aa03154051f4fe9a18a73ebcd36624d11}{}\label{namespaceparse__query_aa03154051f4fe9a18a73ebcd36624d11}
+\index{parse\+\_\+query@{parse\+\_\+query}!select\+Token@{select\+Token}}
+\index{select\+Token@{select\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{select\+Token}{selectToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+select\+Token = Keyword(\char`\"{}select\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_aa9979d0331f3924dcf931d9d1f1aebea}{}\label{namespaceparse__query_aa9979d0331f3924dcf931d9d1f1aebea}
+\index{parse\+\_\+query@{parse\+\_\+query}!special\+Token@{special\+Token}}
+\index{special\+Token@{special\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{special\+Token}{specialToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+special\+Token = {\bf sum\+Token}$\vert${\bf max\+Token}$\vert${\bf min\+Token}$\vert${\bf avg\+Token}$\vert${\bf distinct\+Token}}\hypertarget{namespaceparse__query_aee714d7bc945420e350fd4037ac31476}{}\label{namespaceparse__query_aee714d7bc945420e350fd4037ac31476}
+\index{parse\+\_\+query@{parse\+\_\+query}!sum\+Token@{sum\+Token}}
+\index{sum\+Token@{sum\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{sum\+Token}{sumToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+sum\+Token = Keyword(\char`\"{}sum\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a8d38f4998f3935568112fcd8e31e06a3}{}\label{namespaceparse__query_a8d38f4998f3935568112fcd8e31e06a3}
+\index{parse\+\_\+query@{parse\+\_\+query}!table@{table}}
+\index{table@{table}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{table}{table}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+table = Word(alphanums);}\hypertarget{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}{}\label{namespaceparse__query_a45fab7a8c6d7ac5d8cf43f37b4d29b7e}
+\index{parse\+\_\+query@{parse\+\_\+query}!table\+\_\+column@{table\+\_\+column}}
+\index{table\+\_\+column@{table\+\_\+column}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{table\+\_\+column}{table_column}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+table\+\_\+column = Combine(Optional({\bf table} + \char`\"{}.\char`\"{}) + column);}\hypertarget{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}{}\label{namespaceparse__query_a834dee534400bd080a0a16f06a77be78}
+\index{parse\+\_\+query@{parse\+\_\+query}!table\+\_\+columns@{table\+\_\+columns}}
+\index{table\+\_\+columns@{table\+\_\+columns}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{table\+\_\+columns}{table_columns}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+table\+\_\+columns = Group(delimited\+List({\bf table\+\_\+column}));}\hypertarget{namespaceparse__query_a3e5401120fbf16c839c80e55e67e215e}{}\label{namespaceparse__query_a3e5401120fbf16c839c80e55e67e215e}
+\index{parse\+\_\+query@{parse\+\_\+query}!tables@{tables}}
+\index{tables@{tables}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{tables}{tables}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+tables = Group(delimited\+List({\bf table}));}\hypertarget{namespaceparse__query_a770ec85d393de65ed54d45cf34c43f28}{}\label{namespaceparse__query_a770ec85d393de65ed54d45cf34c43f28}
+\index{parse\+\_\+query@{parse\+\_\+query}!truncate\+Token@{truncate\+Token}}
+\index{truncate\+Token@{truncate\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{truncate\+Token}{truncateToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+truncate\+Token = Keyword(\char`\"{}truncate {\bf table}\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_ae8bbedcc418797a022f1729c3ab06d8f}{}\label{namespaceparse__query_ae8bbedcc418797a022f1729c3ab06d8f}
+\index{parse\+\_\+query@{parse\+\_\+query}!values\+Token@{values\+Token}}
+\index{values\+Token@{values\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{values\+Token}{valuesToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+values\+Token = Keyword(\char`\"{}values\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a23075b5f9c87912458ebe512e6c84d64}{}\label{namespaceparse__query_a23075b5f9c87912458ebe512e6c84d64}
+\index{parse\+\_\+query@{parse\+\_\+query}!where\+Condition@{where\+Condition}}
+\index{where\+Condition@{where\+Condition}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{where\+Condition}{whereCondition}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+where\+Condition = Group({\bf columnL} + {\bf binop} + columnR).set\+Results\+Name(\char`\"{}cond\char`\"{});}\hypertarget{namespaceparse__query_aa5e265b3dd4230a09df4977a3e3db604}{}\label{namespaceparse__query_aa5e265b3dd4230a09df4977a3e3db604}
+\index{parse\+\_\+query@{parse\+\_\+query}!where\+Expression@{where\+Expression}}
+\index{where\+Expression@{where\+Expression}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{where\+Expression}{whereExpression}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+where\+Expression = Forward()}\hypertarget{namespaceparse__query_af769fe5bdda44bd71ae1e252d7b7bba5}{}\label{namespaceparse__query_af769fe5bdda44bd71ae1e252d7b7bba5}
+\index{parse\+\_\+query@{parse\+\_\+query}!where\+Token@{where\+Token}}
+\index{where\+Token@{where\+Token}!parse\+\_\+query@{parse\+\_\+query}}
+\subsubsection[{\texorpdfstring{where\+Token}{whereToken}}]{\setlength{\rightskip}{0pt plus 5cm}parse\+\_\+query.\+where\+Token = Keyword(\char`\"{}where\char`\"{}, caseless=True);}\hypertarget{namespaceparse__query_a4b0f83d40d9f19424aab72cfca82eeba}{}\label{namespaceparse__query_a4b0f83d40d9f19424aab72cfca82eeba}
